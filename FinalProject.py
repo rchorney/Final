@@ -28,9 +28,6 @@ def Data_Source_Page():
             **Contact Email:** [analyticsteam@boston.gov](mailto:analyticsteam@boston.gov)  
             **Landing Page:** [Parking Meters Dataset](https://bostonopendata-boston.opendata.arcgis.com/maps/boston::parking-meters)  
         """)
-
-        # Embedding a video file
-        st.video("C:/Users/reube/Downloads/pexels-james-hamar-12595889 (2160p).mp4")
     
         # Additional information about the dataset
         st.markdown("""
