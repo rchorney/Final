@@ -158,8 +158,22 @@ def data_Overview_Page():
     # Call the function to display the page
     data_overview_page()
 
-
 def main():
+    # Sidebar navigation
+    st.sidebar.title("Navigation")
+    # Create a dictionary of your pages
+    pages_dict = {
+        "Home": render_home_page,
+        "Data Source": Data_Source_Page,
+        "Data Overview": data_Overview_Page
+    }
+    # Radio button for page selection
+    selected_page = st.sidebar.radio("Select a page:", list(pages_dict.keys()))
+
+    # Call the app function based on selection
+    pages_dict[selected_page]()
+
+def render_home_page():
     
     # Load the data
     df = pd.read_csv("Parking_Meters.csv")
