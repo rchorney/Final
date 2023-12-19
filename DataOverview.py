@@ -6,10 +6,8 @@ import plotly.express as px
 
 # Function to load data from a CSV file
 def load_data():
-    path = "C:/Users/reube/OneDrive - Bentley University/School 23-24/CS230/Final/"
-    file = "Parking_Meters.csv"
-    pathFile = path + file
-    return pd.read_csv(pathFile)
+    df = pd.read_csv("Parking_Meters.csv")
+    return df
 
 # Function to analyze parking data
 def analyze_parking_data(df, column_name="X"):
