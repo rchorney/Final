@@ -5,10 +5,7 @@ import matplotlib.pyplot as plt
 
 def main():
     # Load the data
-    path = "C:/Users/reube/OneDrive - Bentley University/School 23-24/CS230/Final/"
-    file = "Parking_Meters.csv"
-    pathFile = path + file
-    df = pd.read_csv(pathFile)
+    df = pd.read_csv("Parking_Meters.csv")
 
     # Convert 'TOW_AWAY' column to boolean - new code I used
     df['TOW_AWAY'] = ~df['TOW_AWAY'].isna()
